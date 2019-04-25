@@ -1,0 +1,31 @@
+{
+  "name": "hypertube",
+  "version": "1.0.0",
+  "description": "Streaming Website",
+  "main": "index.js",
+  "scripts": {
+    "client_install": "cd API && npm i",
+    "server_install": "cd Client && npm i",
+    "client_start": "cd API && npm run dev",
+    "server_start": "cd Client && npm start",
+    "init": "node ./API/scripts/db_setup.js",
+    "start": "concurrently \"npm run server_start\" \"npm run client_start\"",
+    "installAll": "concurrently \"npm i\" \"npm run server_install\" \"npm run client_install\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccu-an-b/Hypertube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccu-an-b/Hypertube/issues"
+  },
+  "homepage": "https://github.com/ccu-an-b/Hypertube#readme",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "concurrently": "^4.1.0",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}

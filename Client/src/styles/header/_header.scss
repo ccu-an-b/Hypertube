@@ -1,0 +1,208 @@
+.navbar-container{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+.nav{
+  padding: 1rem;
+}
+.my-navbar {
+    position:fixed;
+    background-color:black;
+    width:100%;
+    top:0;
+    z-index:20;
+    a {
+        cursor: pointer;
+        transition: all .5s;
+        &:hover{
+          color: $main-yellow;
+          text-decoration: none;
+        }
+     }
+    .right-nav{
+       a {
+          color:$dark-grey; 
+          &:hover{
+            color:$main-white;
+            text-decoration: none;
+          }
+       }
+       .navbar-brand.hypertube{
+         color:$main-yellow;
+         font-size: 1.5rem;
+         transition: all .5s;
+          &:hover {
+            color:$main-yellow;
+          }
+        }
+    }
+    .left-nav{
+      display: flex;
+      align-items:center;
+      width: auto;
+      justify-content: space-between;
+      transition: all .5s;
+      .logout {
+        margin-left: 10px;
+        cursor:pointer;
+        transition: all .5s;
+        color:$dark-grey; 
+        &:hover{
+          color:$main-white;
+        }
+      }
+    }
+    img {
+      width:35px;
+      height:35px;
+      border-radius:0.25rem;
+      object-fit: cover;
+      cursor:pointer;
+    }
+}
+
+.side-menu {
+    width:300px;
+    top:0;
+    background-color:black;
+    height:100vh;
+    position:fixed;
+    right:-300px;
+    transition: all .5s;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    z-index:30;
+    overflow: hidden;
+    a:hover{
+      text-decoration: none;
+    }
+    .header {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      .header-info{
+        width: 100%;
+        border-bottom:2px solid $dark-grey;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      i {
+          align-self:flex-start;
+          cursor:pointer;
+          transition: all .5s;
+          transform: rotate(180deg) skewX(0deg);
+          &:hover{
+            color:$main-yellow;
+          }
+       }
+       img {
+          width:60px;
+          height:60px;
+          border-radius:0.25rem;
+          object-fit: cover;
+        }
+      h1 {
+        font-weight:normal;
+        font-size:22px;
+        cursor: default;
+      }
+      .firstname {
+        margin-top:10px;
+        text-transform: capitalize
+      }
+      .login {
+        font-size:17px;
+        color:$dark-grey;
+        margin-top:-5px;
+      }
+      .header-lang{
+        margin-top: 10px;
+        img {
+          width: 30px;
+          height: auto;
+          margin: 5px;
+          filter: grayscale(100%);
+          transition: all .5s;
+          cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            filter: none;
+          }
+        }
+        .active{
+          filter: none;
+        }
+      }
+      .video-button{
+        margin-top: 20px;
+        margin-right: 0;
+        color: #454545;
+        padding: 10px 35px;
+      }
+      .video-button.transparent{
+        border: 2px solid #454545
+      }
+    }
+    .footer {
+      color:$dark-grey;
+      display: flex;
+      flex-direction: column;
+      .settings{
+        margin-top: 10px;
+        border-top:2px solid $dark-grey;
+        padding-top:10px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      a{
+        transition: all .5s;
+        cursor:pointer;
+        color:$dark-grey;
+        i {
+          margin-right:10px;
+        }
+        &:hover {
+          color:$main-white;
+        }
+      }
+      .fa-door-closed {
+        cursor: pointer;
+        transition: all .5s;
+        margin-top: 3px;
+        display: none;
+      }
+    }
+}
+.side-menu.show {
+    right:0;
+    .header {
+      i {
+        transform: rotate(0deg) skewX(0deg);
+      }
+    }
+}
+
+@media screen and (max-width:550px){
+  .my-navbar .right-nav .navbar-brand.hypertube {
+    width: 18px;
+    overflow: hidden;
+    display: inline-flex;
+    margin-right: 10px;
+  }
+  .my-navbar .left-nav .logout {
+    display: none;
+  }
+  .my-navbar .left-nav{
+    width: auto;
+  }
+  .side-menu .footer .fa-door-closed {
+    display: block;
+  }
+}

@@ -1,0 +1,106 @@
+.users-page{
+    width: 100%;
+    color: black;
+    background-color: black;
+    min-height: 90vh;
+    padding: 20px;
+    padding-top: 40px;
+    .users-page-container{
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        a:hover{
+            text-decoration: none;
+        }
+        .one-user{
+            width: 100%;
+            display: flex;
+            margin-bottom: 20px;
+            color: $main-white;
+            transition: all .5s;
+            &:hover{
+                color:$main-yellow;
+                text-decoration: none;
+            }
+            img {
+                height: 100px;
+                width: 100px;
+                object-fit: cover;
+                border-radius: 0.25rem;
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30px;
+                justify-content: center;
+                img {
+                    width: 30px;
+                    height: auto;
+                    opacity: 0.8;
+                }
+                h1{
+                    text-transform: capitalize;
+                    font-size: 1.8rem;
+                    margin:0;
+                } 
+                h2{
+                    font-size: 1.4rem;
+                    color: #454545;
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .users-page  .users-page-container .one-user{
+        img {
+            min-width: 80px;
+            min-height: 80px;
+            width: 80px;
+            height: 80px;
+        }
+        .info {
+            margin-left: 20px;
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            img {
+                width: 25px;
+                min-height: 0px;
+                min-width: 0px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .users-page  .users-page-container .one-user{
+        img {
+            min-width: 60px;
+            min-height: 60px;
+            width: 60px;
+            height: 60px;
+        }
+        .info {
+            margin-left: 10px;
+            h1 {
+                font-size: 1.3rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            img {
+                width: 20px;
+                min-height: 0px;
+                min-width: 0px;
+                margin-top: 0;
+            }
+        }
+    }
+}

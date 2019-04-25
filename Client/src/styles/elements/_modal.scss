@@ -1,0 +1,98 @@
+.modal {
+    background-color: rgba(0,0,0,0.4);
+    animation:fadein 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    .modal-content {
+        border: none;
+        border-radius: 0.25rem;
+    }
+    .modal-main {
+        background-color: rgba(0,0,0,0.9);
+        box-sizing: border-box;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.25rem;
+        position: relative;
+        cursor: default;
+        animation:fadein 0.8s;
+    }
+    .modal-close {
+        position: absolute;
+        top: -30px;
+        right: -20px;
+        color: $main-white;
+        font-size: 18px;
+        cursor:pointer;
+        opacity: 0.5;
+        transition: all .5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .my-modal-header{
+        display:flex;
+        width: 100%;
+        align-items: flex-end;
+        margin-bottom: 40px;
+
+        h2 {
+            margin:0;
+            color: $main-white;
+        }
+    }
+    .form {
+        width: 300px;
+    }
+    h5{
+        font-size: 14px;
+        margin-top: 20px;
+        color:grey;
+        text-align: right;
+        transition: all .5s;
+        cursor:pointer;
+        font-weight: 100;
+        &:hover{
+            color:$main-white;
+        }
+    }
+    h3 {
+        margin: 0;
+        font-size:22px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.modal.display-block {
+    display:flex ;
+    opacity: 1 ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal.display-none{
+    display: none;
+    opacity: 0;
+}
+
+@media screen and (max-width:500px){
+    .modal {
+        .modal-main {
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding: 40px;
+        }
+        .modal-close {
+            top:20px;
+            right:20px;
+        }
+    }
+}

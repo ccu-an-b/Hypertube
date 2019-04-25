@@ -1,0 +1,20 @@
+@keyframes pulsing {
+	0% {
+	  color: $main-yellow;
+	}
+	50% {
+	  color: black;
+	}
+	100% {
+	  color: $main-yellow;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}

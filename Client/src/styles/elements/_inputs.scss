@@ -1,0 +1,187 @@
+.my-form {
+
+    .form-group{
+        .input-group{
+            border-radius: 0.25rem;
+            overflow: hidden;
+            .form-control {
+                border:none;
+                padding: 10px 15px;
+                background-color: #2e2e2e;
+                color:$main-white;
+                font-family:$main-font;
+                border-radius: 0.25rem;
+                &:focus{
+                    outline: none;
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+        .alert-input{
+            color:$main-yellow;
+            font-weight: 100;
+            font-size: 13px;
+        }
+    }
+
+    .form-submit{
+        width: 100%;
+        .btn {
+            width:100%;
+            border-radius: 0.25rem;
+            background-color: grey;
+            color:$main-white;
+            cursor:default;
+            &:disabled{
+                opacity: 0.75;
+            }
+            &:not(:disabled):not(.disabled) {
+                background-color: $main-yellow;
+            }
+            &:focus{
+                outline: none;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+    }
+    .alert-danger-hypertube{
+        color:$main-red;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .alert-success-hypertube{
+        color:$main-yellow;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.my-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    margin-right: 30px;
+    label{
+        font-size:15px;
+        opacity: 0.5;
+        margin-bottom: 0;
+    }
+    .css-10nd86i{
+        width: 100%;
+    }
+    .css-vj8t7z{
+        background-color: #2e2e2e;
+        border:0;
+    }
+    .css-1hwfws3 {
+        padding-left:8px;
+    }
+    .css-2o5izw{
+        border-color:#2e2e2e;
+        box-shadow: none;
+        background-color: #2e2e2e;
+        &:hover, &:focus{
+            border-color:#2e2e2e;
+            box-shadow: none;
+        }
+    }
+    .css-d8oujb{
+        background-color: transparent;
+    }
+    .css-xp4uvy {
+        color: $main-white;
+    }
+    .css-15k3avv{
+        background-color:  #2e2e2e;
+        color: hsl(0,0%,50%);
+        overflow: hidden;
+        .css-11unzgr {
+            padding:0;
+            &::-webkit-scrollbar {
+                width: 8px !important;
+            }
+            &::-webkit-scrollbar-track {
+            background: #2e2e2e!important;
+            }
+             &::-webkit-scrollbar-thumb {
+            background:#454545!important;
+            border-radius:3px !important;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+            background: black!important;
+            }
+            .css-wqgs6e{
+                &:hover{
+                    color:$main-white;
+                    background-color: #454545;
+                }
+            }
+        }
+    }
+}
+
+.my-search{
+    border: 0 !important;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    width:250px;
+    height: 36px;
+    background-color: #2e2e2e;
+    input {
+      height: 100% !important;
+      background-color: #2e2e2e;
+      font-weight: initial !important;
+      font-size: 16px !important;
+    }
+    button {
+      height: 100% !important;
+      background-color: #2e2e2e !important;
+      border: 0 !important;
+    }
+}
+
+.my-slider{
+    width: 160px;
+    margin-right: 20px;
+    h5{
+        color: hsl(0,0%,50%);
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .slider-interval{
+        width: 100%;
+        .rc-slider-track{
+            background-color:$main-yellow ;
+        }
+        .rc-slider-rail {
+            background-color: $dark-grey;
+        }
+        .rc-slider-handle{
+            border-color: #454545;
+            background-color:hsl(0,0%,50%);
+            &:hover, &:active{
+                border-color: $main-yellow;
+            }
+            &:focus {
+                border-color: $main-yellow;
+                -webkit-box-shadow: none;
+                box-shadow: 0 0 0 1px $main-yellow ;
+                outline: none;
+            }
+        }
+        .rc-slider-handle-click-focus{
+            border-color: $main-yellow;
+        }
+    }
+    .slider-interval.not-changed{
+        .rc-slider-track{
+            background-color:$dark-grey ;
+        }
+    }
+}

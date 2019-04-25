@@ -1,0 +1,196 @@
+.facebook {
+    background: #4464a2;
+    color: white;
+}
+
+.ecole{
+    background-color:#00babc;
+    color:white;
+}
+
+.google {
+    background-color: #DB4437;
+    color:white;
+}
+
+.github {
+    background-color:  #333333;
+    color:white;
+}
+
+.modal .form-container{
+    display:flex;
+
+    .oauth-container{
+        border-left: 2px solid grey;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        .or {
+            margin-left: -20px;
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            span{
+                width: 100%;
+            }
+        }
+        .social-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 20px;
+            a {
+                &:hover{
+                    text-decoration: none;
+                }
+                &:hover div {
+                    filter: brightness(1.2);
+                }
+            }
+            .social {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                border-radius: 0.25rem;
+                padding: 10px;
+                margin: 10px 0;
+                cursor:pointer;
+                h3 {
+                    font-weight: 100;
+                    font-size: 16px;
+                    text-align: left;
+                }
+                i {
+                    margin-right: 10px;
+                    font-size: 22px;
+                }
+                img{
+                    width: 22px;
+                    margin-right:10px;
+                }
+                .my-button-facebook{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                    transition: all .5s;
+                    &:hover{
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.img-upload-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom:1em;
+    label{
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 0.25rem;
+        height: 80px;
+        min-width: 80px;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:20px;
+        background-size: contain;
+    }
+    h4 {
+        text-align: left;
+        font-size: 16px;
+        color:grey;
+        cursor:pointer;
+        transition: all .5s;
+        &:hover{
+            color:white;
+        }
+    }
+    .img-preview-container {
+        position: absolute;
+        border-radius:0.25rem;
+        overflow:hidden;
+    }
+
+    .img-preview {
+        background: center center no-repeat;
+        background-size: cover;
+        height:80px;
+        width:80px;
+        border-radius: 0.25rem;
+        cursor:pointer;
+    }
+
+    .img-upload {
+        margin-bottom: 0;
+    }
+    input {
+        display: none;
+    }
+
+    .alert {
+        margin-top: 10px;
+        position: absolute;
+        bottom: 0px;
+        background-color: transparent;
+        border: 0;
+        color: $main-yellow;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .modal .form-container{
+        flex-wrap: wrap;
+        padding-right:10px;
+        .my-form{
+            width: 100%;
+        }
+        &:hover{
+            visibility:visible;
+        }
+        &::-webkit-scrollbar {
+                width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background:#2e2e2e; 
+            border-radius:3px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: grey;
+        }
+        .oauth-container{
+            flex-direction: column;
+            margin-left: 0;
+            margin-top:20px;
+            border-left :0px;
+            border-top: 2px solid grey;
+            width: 100%;
+            .or {
+                margin-left:initial;
+                margin-top: -20px;
+            }
+            .social-container{
+                margin-left: initial;
+                margin-top: 20px;
+            }
+        }
+    }
+}

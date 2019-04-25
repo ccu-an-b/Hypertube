@@ -1,0 +1,33 @@
+.mylist-page{
+    background-color: black;
+    widows: 100% ;
+    min-height: 90vh;
+    padding-top: 40px;
+    .movie-gallery{
+        margin-top: 60px;
+    }
+    .movie-container-title {
+        position: absolute;
+        top: -60px;
+        color:$main-yellow;
+    }
+    .no-list{
+        h1 {
+            margin-top: 40px;
+            color:$main-yellow;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            color: #454545;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .movie-container-title {
+        left: 20px;
+        font-size: 2rem;
+    }
+}

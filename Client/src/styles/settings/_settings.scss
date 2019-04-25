@@ -1,0 +1,93 @@
+.page-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.settings-page{
+    background-color: black;
+    width: 100%;
+    min-height: 90vh;
+    .settings-container{
+        width: 100%;
+        max-width: 850px;
+        margin:auto;
+        padding: 20px;
+        padding-top:40px;
+        .settings-title{
+            color: $dark-grey;
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 20px;
+        }
+        .settings-section {
+            width:100%;
+            border-top: 2px solid $dark-grey;
+            padding-top: 10px;
+            margin-bottom: 20px;
+
+            .my-form{
+                max-width:400px;
+                width:100%;
+                margin:30px auto;
+                .form-submit.right{
+                    justify-content: flex-end;
+                }
+                .form-submit{
+                    display: flex;
+                    .btn{
+                        width:50%;
+                    }
+                }
+                .form-group.editable .input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+                    .form-control{
+                        margin-bottom: 0;
+                    }
+                    .btn{
+                        height: 38px;
+                        margin: 0 10px;
+                        background-color: $main-yellow;
+                        transition: all .5s;
+                        &:hover{
+                            color:$main-yellow;
+                            background-color: $main-white;
+                        }
+                    }
+                    i{
+                        cursor:pointer;
+                        color: $dark-grey;
+                        transition: all .5s;
+                        &:hover{
+                            color:$main-yellow;
+                        }
+                    }
+                }
+            }
+            .non-active-form{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+                p{
+                    padding: 7px 15px;
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                    cursor:default;
+                }
+                i {
+                    cursor:pointer;
+                    color: $dark-grey;
+                    transition: all .5s;
+                    margin-right: 10px;
+                    &:hover{
+                        color:$main-yellow;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

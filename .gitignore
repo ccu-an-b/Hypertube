@@ -1,0 +1,34 @@
+# dependencies
+/node_modules
+/API/node_modules
+/Client/node_modules
+
+# testing
+/coverage
+/API/coverage
+/Client/coverage
+
+# production
+/build
+/Client/build
+
+.DS_Store
+._.DS_Store
+
+/Client/npm-debug.log*
+/Client/yarn-debug.log*
+/Client/yarn-error.log*
+/Client//.changelog
+/Client/.npm/
+
+*.tgz
+my-app*
+template/src/__tests__/__snapshots__/
+lerna-debug.log
+
+.idea/
+.vscode/
+
+API/src/public/torrents
+API/src/public/tmp
+

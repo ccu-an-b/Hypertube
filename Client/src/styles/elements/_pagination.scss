@@ -1,0 +1,71 @@
+.data-pagination {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+.data-pagination {
+  font-size: 8pt;
+  line-height: 1;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  margin: 1em auto;
+  text-align: center;
+  transition: font-size .2s ease-in-out;
+  margin-top:20px;
+}
+.data-pagination ul {
+  list-style-type: none;
+  display: inline;
+  font-size: 100%;
+  margin: 0;
+  padding: .5em;
+}
+.data-pagination ul li {
+  display: inline-block;
+  font-size: 19px;
+  font-weight: bolder;
+  width: auto;
+  border-radius: 3px;
+  padding: .5rem;
+  color: $dark-grey;
+  transition: all .5s;
+  cursor:pointer;
+  &:hover{
+    color:$main-yellow;
+    padding: .5rem .7rem;
+  }
+  &:focus, &:active{
+    box-shadow: none;
+    border:0;
+    outline:none;
+  }
+}
+
+.data-pagination .ant-pagination-item-active {
+  color:$main-yellow;
+}
+
+.data-pagination .ant-pagination-jump-next, .data-pagination .ant-pagination-jump-prev {
+  svg{
+    display:none;
+  }
+  .ant-pagination-item-ellipsis{
+    font-size:17px;
+  }
+}
+
+.data-pagination .ant-pagination-item-active {
+  background: rgba(0,0,0,.1)
+}
+/* Disabled & Hidden Styles */
+.data-pagination .disabled,
+.data-pagination [hidden],
+.data-pagination [disabled] {
+  opacity: .5;
+  pointer-events: none;
+}

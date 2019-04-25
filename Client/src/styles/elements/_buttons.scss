@@ -1,0 +1,54 @@
+.button{
+  border-radius:0.25rem;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:all .5s;
+  color:$main-white;
+}
+
+.button.big{
+  padding:20px 40px;
+}
+
+.button.red{
+  background-color:rgba(132,0,50,0.8);
+  &:hover{
+    background-color:rgba(132,0,50,1);
+  }
+}
+
+.video-button {
+  border-radius: 0.25rem;
+  padding: 10px 15px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  color: $main-white;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.video-button.yellow{
+  background-color: $main-yellow;
+  color: $main-white;
+  &:hover{
+    color: $main-yellow;
+    background-color:$main-white;
+  }
+}
+
+.video-button.transparent{
+  border: 2px solid $main-white;
+  &:hover{
+    background-color:$main-yellow;
+  }
+}
+
+@media screen and (max-width:600px){
+  .button.big{
+    padding: 20px 20px;
+  }
+}

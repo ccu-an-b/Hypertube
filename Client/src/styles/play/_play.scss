@@ -1,0 +1,54 @@
+@import "https://cdn.plyr.io/3.3.21/plyr.css";
+
+.player {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    video {
+        min-height: 50vw;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.actors {
+    display: flex;
+    flex-direction: row;
+    img {
+        border-radius: 50%;
+      }
+}
+
+.social {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: flex-end;
+    .like, .unlike{
+        color: #888888;
+        margin-left: 30px;
+        i {
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 20px;
+            transition: all .5s;
+            &:hover{
+                color: $main-yellow;
+            }
+        }
+    }
+    .unlike {
+        display: flex;
+        i {
+            margin-top: 7px;
+        }
+    }
+    .like.isLike{
+        color: $main-yellow;
+    }
+    .unlike.isUnlike{
+        color:  $main-red;
+    }
+}

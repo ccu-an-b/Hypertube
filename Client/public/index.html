@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
+    <meta name="theme-color" content="#E59500">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <!-- Apple PWA Rules -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="mobile-web-app-capable" content="yes">  
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple_app_logo.png"/>
+    <link rel="apple-touch-startup-image" sizes="320x480" href="@Url.Content('%PUBLIC_URL%/matcha_icon.png')"  media="(device-width: 320px) and (device-height: 480px)  
+                     and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <meta name="apple-mobile-web-app-title" content="Hypertube"/>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+    <!-- Font import -->
+    <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Lato:100,300,400,700,900|Fascinate+Inline|Fira+Sans:200,400,500,600,700|Monoton|Plaster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Hypertube</title>
+  </head>
+
+  <body class='my-body'>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <!-- App container -->
+    <div id="root">
+
+    </div>
+  </body>
+
+<script>
+    function receiveMessage(event) {
+        if (event.origin !== "http://localhost:3000/") return true
+    }
+    window.addEventListener("message", receiveMessage, false);
+</script>
+</html>

@@ -1,0 +1,68 @@
+@import 'variables.scss';
+@import 'animations.scss';
+@import 'landing/landing.scss';
+@import 'landing/form.scss';
+@import 'header/header.scss';
+@import 'browse/browse.scss';
+@import 'browse/movie-gallery.scss';
+@import 'browse/browsebar.scss';
+@import 'error/error.scss';
+@import 'settings/settings.scss';
+@import 'profile/profile.scss';
+@import 'mylist/mylist.scss';
+@import 'users/users.scss';
+@import 'elements/buttons.scss';
+@import 'elements/modal.scss';
+@import 'elements/inputs.scss';
+@import 'elements/pagination.scss';
+@import 'play/play.scss';
+@import 'play/description.scss';
+
+.my-body{
+    background-color:black;
+    color:$main-white;
+    margin:0;
+    overflow-x: hidden;
+    font-family:$main-font; 
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+    background: black; 
+    }
+    &::-webkit-scrollbar-thumb {
+    background:#454545; 
+    border-radius:3px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+    background: grey;
+    }
+}
+
+.App {
+    padding-top: 62px;
+}
+
+*{
+box-sizing: border-box;
+}
+
+.hypertube {
+    font-family: $hypertube;
+    color: $main-yellow;
+    text-transform:uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize
+}
+
+.loading_gif{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 40px 0;
+    img {
+        height:50px;
+    }
+}

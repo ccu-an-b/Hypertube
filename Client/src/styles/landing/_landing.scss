@@ -1,0 +1,135 @@
+.index{
+  width:100%;
+  min-height:100vh;
+  transition: all .5s;
+  position:relative;
+  background-size: cover;
+  margin-top:-62px;
+  &:after {
+    content: "";
+    position:absolute;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:1;
+    transition:all 5s;
+  }
+  *{
+  z-index:2
+  }
+  .index-container{
+    width: 100%;
+    min-height:100vh;
+    display:flex;
+    position: relative;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .hypertube {
+    overflow: hidden;
+    width: 800px;
+    transition: all ease 2s;
+    margin: 0;
+    font-size: 7em;
+    filter: drop-shadow(0.05em 0.025em rgba(0, 0, 0, 0.8));
+    text-align: center;
+  }
+  .button {
+    overflow:hidden; 
+    opacity:1;
+  }
+  .button.sign-up{
+    transition-delay: 2s, 0s;
+    transition-duration: 1s, .5s ;
+    transition-property: opacity, background-color;
+  }
+  .button.sign-in{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: all .5s;
+    &:hover{
+      color:$main-yellow;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.index.loading {
+  .hypertube{
+    width:80px;
+    animation-name: pulsing ;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    filter: none;
+  }
+  &:after {
+    background:black;
+  }
+  .button{
+    opacity:0;
+  }
+}
+
+.index.loading.token{
+  position: absolute;
+  top:0;
+  z-index:100;
+}
+
+@media screen and (max-width: 790px){
+  .index {
+    .hypertube {
+      font-size: 5em;
+      width: 580px;
+    }
+    .button.sign-in{
+      top:20px;
+      right: 20px;
+    }
+  }
+  .index.loading {
+    .hypertube{
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 570px){
+  .index {
+    .hypertube {
+      font-size: 3em;
+      width: 350px;
+    }
+    .button.sign-in{
+      top:10px;
+      right: 10px;
+    }
+  }
+  .index.loading {
+    .hypertube{
+      width: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .index {
+    .hypertube {
+      font-size: 2.7em;
+      width: 320px;
+    }
+    .button.sign-in{
+      top:0px;
+      right: 0px;
+    }
+  }
+  .index.loading {
+    .hypertube{
+      width: 30px;
+    }
+  }
+}

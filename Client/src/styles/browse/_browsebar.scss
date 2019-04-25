@@ -1,0 +1,45 @@
+.browse-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    margin-top: 20px;
+    .filter{
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width:1200px){
+    .browse-bar{
+        flex-direction: column-reverse;
+        .my-search{
+            margin-bottom: 20px;
+        }
+        .filter{
+            width: 100%;
+            justify-content: space-around;
+            .my-select{
+                margin:5px;
+            }   
+            .my-slider{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .browse-bar{
+        .filter {
+           flex-wrap: wrap;
+           .my-select{
+               margin-bottom: 20px;
+           }
+           .my-slider{
+               margin-bottom: 20px;
+           }
+        }
+    }
+}
